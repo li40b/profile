@@ -13,7 +13,8 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { createTheme, } from '@mui/material/styles';
 
-const pages = ['Profile', 'Skill', 'Work']; //ページのメニュー配列
+const pages = ['Profile', 'Skill', 'Work', 'Comment']; //ページのメニュー配列
+//const link = ['#profileLink', '#skillLink', '#workLink', '#commentLink'];
 
 const theme = createTheme({
   palette: {
@@ -97,6 +98,7 @@ const Header = () => {
             {pages.map((page) => (
               <Button
                 key={page}
+                href={'#profileLink'}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >

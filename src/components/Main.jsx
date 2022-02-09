@@ -16,7 +16,7 @@ const Main = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.footer}>
+    <div className={classes.footer} id="main">
       <h1>tattu-'s profile</h1>
       <p></p>
     </div>

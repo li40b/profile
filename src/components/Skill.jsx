@@ -20,9 +20,12 @@ const useStyles = makeStyles({
     width: "100%",
     position: "absolute",
     textAlign: "center",
+    paddingTop: "100px",
+
   },
   Contents: {
     backgroundColor: "#212121",
+    paddingTop: "200px",
   },
   box: {
 
@@ -55,7 +58,7 @@ const Skill = () => {
           <Card 
               sx={{ 
                 maxWidth: 300,
-                maxHeight: 300,
+                maxHeight: 350,
                 p: 2,
                 m: 5
               }}>
@@ -81,7 +84,7 @@ const Skill = () => {
           <Card 
               sx={{ 
                 maxWidth: 300,
-                maxHeight: 300,
+                maxHeight: 350,
                 p: 2,
                 m: 5
               }}>
@@ -107,7 +110,7 @@ const Skill = () => {
           <Card 
               sx={{ 
                 maxWidth: 300,
-                maxHeight: 300,
+                maxHeight: 350,
                 p: 2,
                 m: 5
               }}>
@@ -133,7 +136,7 @@ const Skill = () => {
           <Card 
               sx={{ 
                 maxWidth: 300,
-                maxHeight: 300,
+                maxHeight: 350,
                 p: 2,
                 m: 5
               }}>
