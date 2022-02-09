@@ -8,13 +8,15 @@ const useStyles = makeStyles({
     width: "100%",
     position: "absolute",
     textAlign: "center",
+    paddingTop: "100px",
+    paddingBottom: "100px",
   },
 });
 
 const Footer = () => {
   const classes = useStyles();
   return (
-    <div className={classes.footer}>tattu-@li40b.com</div>
+    <div className={classes.footer}>Thank you for coming!</div>
   );
 };
 

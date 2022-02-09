@@ -5,8 +5,8 @@ const useStyles = makeStyles({
     color: "#000000",
     backgroundColor: "#ffff",
     textAlign: "center",
-    marginTop: "300px",
-    marginBottom: "300px",
+    paddingTop: "300px",
+    paddingBottom: "300px",
   },
 });
 
@@ -16,8 +16,8 @@ const Comment = () => {
 
   return (
     <div className={classes.footer}>
-      <h1>tattu-'s profile</h1>
-      <p></p>
+      <h1>Comment</h1>
+      <p>私の自己紹介サイトを見ていただきありがとうございます。</p>
     </div>
   )
 };
