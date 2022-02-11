@@ -90,13 +90,16 @@ const Header = () => {
               }}
             >
               {menus.map((menu) => (
-                <MenuItem 
-                  key={menu.pages} 
-                  href={menu.link}
-                  onClick={handleCloseNavMenu}
-                >
-                  <Typography textAlign="center">{menu.pages}</Typography>
-                </MenuItem>
+                <Link href={menu.link} underline="none" color="inherit">
+                  <MenuItem 
+                    key={menu.pages} 
+                    onClick={handleCloseNavMenu}
+                  >
+                    <Typography textAlign="center">
+                      {menu.pages}
+                    </Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>
@@ -107,7 +110,9 @@ const Header = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            tattu-'s profile
+            <Link href="#" underline="none" color="inherit">
+            <h3>tattu-'s profile</h3>
+            </Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
           <div style={{ flexGrow: 1 }}></div>
