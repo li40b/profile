@@ -16,7 +16,7 @@ const Work = () => {
   const classes = useStyles();
 
   return(
-    <div className={classes.profile}>
+    <div className={classes.profile} id="workLink">
       <h1>Work</h1>
       <p>※準備中</p>
     </div>

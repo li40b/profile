@@ -37,7 +37,7 @@ const Skill = () => {
   const classes = useStyles();
 
   return (
-    <div>
+    <div id="skillLink">
       <div>
         <h1 className={classes.Title}>Skill</h1>
       </div>

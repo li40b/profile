@@ -20,7 +20,7 @@ const Comment = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.comment}>
+    <div className={classes.comment} id="commentLink">
       <h1 className={classes.title}>Comment</h1>
       <p className={classes.text}>私の自己紹介サイトを見ていただきありがとうございます。</p>
     </div>

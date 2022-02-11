@@ -11,15 +11,25 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import Link from '@mui/material/Link';
 import { createTheme, } from '@mui/material/styles';
 
-const pages = ['Profile', 'Skill', 'Work', 'Comment']; //ページのメニュー配列
+//const pages = ['Profile', 'Skill', 'Work', 'Comment']; //ページのメニュー配列
 //const link = ['#profileLink', '#skillLink', '#workLink', '#commentLink'];
+
+const menus = [
+  {pages: "Profile", link: "#profileLink"},
+  {pages: "Skill", link: "#skillLink"},
+  {pages: "Work", link: "#workLink"},
+  {pages: "Comment", link: "#commentLink"},
+
+];
 
 const theme = createTheme({
   palette: {
     primary: {
       main: '#212121',
+      position: 'fixed'
     },
   },
 });
@@ -36,7 +46,7 @@ const Header = () => {
   };
 
   return (
-    <AppBar position="static" theme={theme}>
+    <AppBar position="fixed" theme={theme}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -45,7 +55,9 @@ const Header = () => {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
-            tattu-'s profile
+            <Link href="#" underline="none" color="inherit">
+            <h3>tattu-'s profile</h3>
+            </Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -77,9 +89,13 @@ const Header = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {menus.map((menu) => (
+                <MenuItem 
+                  key={menu.pages} 
+                  href={menu.link}
+                  onClick={handleCloseNavMenu}
+                >
+                  <Typography textAlign="center">{menu.pages}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -95,14 +111,14 @@ const Header = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
           <div style={{ flexGrow: 1 }}></div>
-            {pages.map((page) => (
+            {menus.map((menu) => (
               <Button
-                key={page}
-                href={'#profileLink'}
+                key={menu.pages}
+                href={menu.link}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {menu.pages}
               </Button>
             ))}
           </Box>
