@@ -6,7 +6,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
+import Rating from '@mui/material/Rating';
 import htmlImg from "../img/html-5.svg";
 import cssImg from "../img/css-3.svg";
 import vueImg from "../img/vue.svg";
@@ -27,10 +27,40 @@ const useStyles = makeStyles({
     backgroundColor: "#212121",
     paddingTop: "200px",
   },
-  box: {
-
-  }
 });
+
+const skillItems = [
+  { 
+    id: 1,
+    name: 'HTML', 
+    text: '', 
+    img: htmlImg,
+    value : "4"
+  },
+  { 
+    id: 2,
+    name: 'CSS', 
+    text: '', 
+    img: cssImg,
+    value : "3" 
+  },
+  {
+    id: 3,
+    name: 'Vue', 
+    text: '', 
+    img: vueImg,
+    value : "3"
+  },
+  {
+    id: 4,
+    name: 'React', 
+    text: '' , 
+    img: reactImg,
+    value : "2" 
+  }
+]
+
+console.log(skillItems);
 
 const Skill = () => {
 
@@ -54,110 +84,33 @@ const Skill = () => {
               backgroundColor: '#212121',
             }}
           >
-          {/* html */}
+        {skillItems.map((skillItem) => (
           <Card 
               sx={{ 
                 maxWidth: 300,
                 maxHeight: 350,
                 p: 2,
                 m: 5
-              }}>
-            <CardActionArea>
+              }}
+              key={skillItem.id}
+              >
               <CardMedia
-                component="img"
-                height="140"
-                image={ htmlImg }
-                alt="HTML"
+              component="img"
+              height="140"
+              image={ skillItem.img }
+              alt={skillItem.name}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  HTML
+                {skillItem.name}
                 </Typography>
+                <Rating name="read-only" value={skillItem.value} readOnly />
                 <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over 6,000
-                  species, ranging across all continents except Antarctica
+                {skillItem.text}
                 </Typography>
               </CardContent>
-            </CardActionArea>
           </Card>
-          {/* CSS */}
-          <Card 
-              sx={{ 
-                maxWidth: 300,
-                maxHeight: 350,
-                p: 2,
-                m: 5
-              }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={ cssImg }
-                alt="HTML"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  HTML
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over 6,000
-                  species, ranging across all continents except Antarctica
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-          {/* vue */}
-          <Card 
-              sx={{ 
-                maxWidth: 300,
-                maxHeight: 350,
-                p: 2,
-                m: 5
-              }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={ vueImg }
-                alt="HTML"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  HTML
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over 6,000
-                  species, ranging across all continents except Antarctica
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-          {/* react */}
-          <Card 
-              sx={{ 
-                maxWidth: 300,
-                maxHeight: 350,
-                p: 2,
-                m: 5
-              }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={ reactImg }
-                alt="HTML"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  HTML
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over 6,000
-                  species, ranging across all continents except Antarctica
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
+        ))}
         </Box>
       </div>
     </div>

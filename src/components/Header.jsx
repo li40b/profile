@@ -14,9 +14,6 @@ import MenuItem from '@mui/material/MenuItem';
 import Link from '@mui/material/Link';
 import { createTheme, } from '@mui/material/styles';
 
-//const pages = ['Profile', 'Skill', 'Work', 'Comment']; //ページのメニュー配列
-//const link = ['#profileLink', '#skillLink', '#workLink', '#commentLink'];
-
 const menus = [
   {pages: "Profile", link: "#profileLink"},
   {pages: "Skill", link: "#skillLink"},
@@ -90,9 +87,8 @@ const Header = () => {
               }}
             >
               {menus.map((menu) => (
-                <Link href={menu.link} underline="none" color="inherit">
+                <Link  key={menu.pages} href={menu.link} underline="none" color="inherit">
                   <MenuItem 
-                    key={menu.pages} 
                     onClick={handleCloseNavMenu}
                   >
                     <Typography textAlign="center">
