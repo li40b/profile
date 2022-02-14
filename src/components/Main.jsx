@@ -17,8 +17,7 @@ const Main = () => {
 
   return (
     <div className={classes.footer} id="main">
-      <h1>tattu-'s profile</h1>
-      <p></p>
+        <h1>tattu-'s profile</h1>
     </div>
   )
 };

@@ -9,16 +9,17 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import Link from '@mui/material/Link';
+import Button from '@mui/material/Button';
+import { animateScroll as scroll } from "react-scroll";
+import { Link as Scroll } from 'react-scroll';
 import { createTheme, } from '@mui/material/styles';
 
 const menus = [
-  {pages: "Profile", link: "#profileLink"},
-  {pages: "Skill", link: "#skillLink"},
-  {pages: "Work", link: "#workLink"},
-  {pages: "Comment", link: "#commentLink"},
+  {pages: "Profile", link: "profileLink"},
+  {pages: "Skill", link: "skillLink"},
+  {pages: "Work", link: "workLink"},
+  {pages: "Comment", link: "commentLink"},
 
 ];
 
@@ -30,6 +31,10 @@ const theme = createTheme({
     },
   },
 });
+
+const scrollToTop = () => {
+  scroll.scrollToTop();
+};
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -52,9 +57,9 @@ const Header = () => {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
-            <Link href="#" underline="none" color="inherit">
-            <h3>tattu-'s profile</h3>
-            </Link>
+            <Scroll onClick={scrollToTop} smooth={true}>
+              <h3>tattu-'s profile</h3>
+            </Scroll>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -87,7 +92,7 @@ const Header = () => {
               }}
             >
               {menus.map((menu) => (
-                <Link  key={menu.pages} href={menu.link} underline="none" color="inherit">
+                <Scroll  key={menu.pages} to={menu.link} smooth={true}>
                   <MenuItem 
                     onClick={handleCloseNavMenu}
                   >
@@ -95,7 +100,7 @@ const Header = () => {
                       {menu.pages}
                     </Typography>
                   </MenuItem>
-                </Link>
+                </Scroll>
               ))}
             </Menu>
           </Box>
@@ -106,21 +111,25 @@ const Header = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            <Link href="#" underline="none" color="inherit">
-            <h3>tattu-'s profile</h3>
-            </Link>
+            <Scroll onClick={scrollToTop} smooth={true}>
+              <h3>tattu-'s profile</h3>
+            </Scroll>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
           <div style={{ flexGrow: 1 }}></div>
             {menus.map((menu) => (
               <Button
-                key={menu.pages}
-                href={menu.link}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+              key={menu.pages}
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'white', display: 'block' }}
+            >
+              <Scroll
+                to={menu.link}
+                smooth={true}
               >
                 {menu.pages}
-              </Button>
+              </Scroll>
+            </Button>
             ))}
           </Box>
         </Toolbar>

@@ -22,9 +22,8 @@ const useStyles = makeStyles({
     borderRadius: "50%",
     marginRight: "50px"
   },
-  text: {
-  }
 });
+
 
 const Profile = () => {
 
@@ -32,19 +31,18 @@ const Profile = () => {
 
   return (
     <div className={classes.profile} id="profileLink">
-      <h1 className={classes.title}>PROFILE</h1>
-      <div className={classes.contents}>
-        <img className={classes.img} src={img} alt="icon"/>
-          <p>name:tattu-<br/>
-             age:24<br/>
-             address:Aomori<br/>
-             occupation:web engineer<br/>
-             <a href="https://github.com/li40b">GitHub</a><br />
-             <a href="https://qiita.com/li40b">Qiita</a>
-          </p>
-      </div>
-        <p className={classes.text}>
-      </p>
+        <h1 className={classes.title}>PROFILE</h1>
+        <div className={classes.contents}>
+          <img className={classes.img} src={img} alt="icon"/>
+            <p>name:tattu-<br/>
+              age:24<br/>
+              address:Aomori<br/>
+              occupation:web engineer<br/>
+              <a href="https://github.com/li40b">GitHub</a><br />
+              <a href="https://qiita.com/li40b">Qiita</a><br/>
+              <a href="http://li40b.com/blog/">blog</a>
+            </p>
+        </div>
     </div> 
   );
 };
