@@ -1,5 +1,6 @@
 //Profile.jsx
 import { makeStyles } from "@mui/styles";
+import img from  "../img/IMG_0113.JPG";
 
 const useStyles = makeStyles({
   profile: {
@@ -11,8 +12,17 @@ const useStyles = makeStyles({
     paddingTop: "100px",
     paddingBottom: "100px",
   },
+  contents: {
+    display: "flex",
+    justifyContent: "center",
+    paddingBottom: "100px"
+  },
+  img: {
+    height: "150px",
+    borderRadius: "50%",
+    marginRight: "50px"
+  },
   text: {
-    paddingBottom: "200px",
   }
 });
 
@@ -23,9 +33,17 @@ const Profile = () => {
   return (
     <div className={classes.profile} id="profileLink">
       <h1 className={classes.title}>PROFILE</h1>
-      <p className={classes.text}>青森県在住webエンジニア。大学では社会福祉を勉強していたがITの分野に興味があり、<br />
-        独学でITの勉強を始めました。今はフロントエンドの開発をしながら勉強をしていき、<br />
-        いずれはバックエンドの業務をしていきたいと思っています。
+      <div className={classes.contents}>
+        <img className={classes.img} src={img} alt="icon"/>
+          <p>name:tattu-<br/>
+             age:24<br/>
+             address:Aomori<br/>
+             occupation:web engineer<br/>
+             <a href="https://github.com/li40b">GitHub</a><br />
+             <a href="https://qiita.com/li40b">Qiita</a>
+          </p>
+      </div>
+        <p className={classes.text}>
       </p>
     </div> 
   );
