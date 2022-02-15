@@ -9,8 +9,14 @@ import Typography from '@mui/material/Typography';
 import Rating from '@mui/material/Rating';
 import htmlImg from "../img/html-5.svg";
 import cssImg from "../img/css-3.svg";
+import jsImg from "../img/javascript.svg";
+import jqueryImg from "../img/jquery.svg";
 import vueImg from "../img/vue.svg";
 import reactImg from "../img/react.svg";
+import wordpressImg from "../img/wordpress-icon.svg";
+import dockerImg from "../img/docker-icon.svg";
+import gitImg from "../img/git-icon.svg";
+import githubImg from "../img/github-icon.svg";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
@@ -46,18 +52,60 @@ const skillItems = [
   },
   {
     id: 3,
-    name: 'Vue', 
+    name: 'JavaScript', 
     text: '', 
-    img: vueImg,
-    value : "3"
+    img: jsImg,
+    value : "4"
   },
   {
     id: 4,
+    name: 'Jquery', 
+    text: '' , 
+    img: jqueryImg,
+    value : "3" 
+  },
+  {
+    id: 5,
+    name: 'Vue', 
+    text: '' , 
+    img: vueImg,
+    value : "2" 
+  },
+  {
+    id: 6,
     name: 'React', 
     text: '' , 
     img: reactImg,
-    value : "2" 
-  }
+    value : "3" 
+  },
+  {
+    id: 7,
+    name: 'WordPress', 
+    text: '' , 
+    img: wordpressImg,
+    value : "3" 
+  },
+  {
+    id: 8,
+    name: 'Docker', 
+    text: '' , 
+    img: dockerImg,
+    value : "3" 
+  },
+  {
+    id: 9,
+    name: 'Git', 
+    text: '' , 
+    img: gitImg,
+    value : "3" 
+  },
+  {
+    id: 10,
+    name: 'GitHub', 
+    text: '' , 
+    img: githubImg,
+    value : "3" 
+  },
 ]
 
 console.log(skillItems);
