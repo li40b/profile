@@ -55,7 +55,7 @@ const skillItems = [
     name: 'JavaScript', 
     text: '', 
     img: jsImg,
-    value : "4"
+    value : "3"
   },
   {
     id: 4,
