@@ -24,7 +24,7 @@ const Comment = () => {
       <h1 className={classes.title}>Comment</h1>
       <p className={classes.text}>
         最後までご閲覧いだだきありがとうございます。<br />
-        私の事をすこしでも知っていただけたら幸いです。
+        私の事をすこしでも知っていただけたら幸いです。<br />
       </p>
     </div>
   )

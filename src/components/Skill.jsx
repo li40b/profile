@@ -31,7 +31,7 @@ const useStyles = makeStyles({
   },
   Contents: {
     backgroundColor: "#212121",
-    paddingTop: "200px",
+    padding: "200px 150px",
   },
 });
 
