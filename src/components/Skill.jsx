@@ -10,7 +10,6 @@ import Rating from '@mui/material/Rating';
 import htmlImg from "../img/html-5.svg";
 import cssImg from "../img/css-3.svg";
 import jsImg from "../img/javascript.svg";
-import jqueryImg from "../img/jquery.svg";
 import vueImg from "../img/vue.svg";
 import reactImg from "../img/react.svg";
 import wordpressImg from "../img/wordpress-icon.svg";
@@ -31,7 +30,11 @@ const useStyles = makeStyles({
   },
   Contents: {
     backgroundColor: "#212121",
-    padding: "200px 150px",
+    padding: "200px 50px",
+  },
+  text: {
+    color: "#ebf6f7",
+    paddingTop: "50px",
   },
 });
 
@@ -41,7 +44,7 @@ const skillItems = [
     name: 'HTML', 
     text: '', 
     img: htmlImg,
-    value : "4"
+    value : "3"
   },
   { 
     id: 2,
@@ -59,48 +62,41 @@ const skillItems = [
   },
   {
     id: 4,
-    name: 'Jquery', 
+    name: 'Vue', 
     text: '' , 
-    img: jqueryImg,
+    img: vueImg,
     value : "3" 
   },
   {
     id: 5,
-    name: 'Vue', 
+    name: 'React', 
     text: '' , 
-    img: vueImg,
+    img: reactImg,
     value : "2" 
   },
   {
     id: 6,
-    name: 'React', 
-    text: '' , 
-    img: reactImg,
-    value : "3" 
-  },
-  {
-    id: 7,
     name: 'WordPress', 
     text: '' , 
     img: wordpressImg,
-    value : "3" 
+    value : "2" 
   },
   {
-    id: 8,
+    id: 7,
     name: 'Docker', 
     text: '' , 
     img: dockerImg,
-    value : "3" 
+    value : "2" 
   },
   {
-    id: 9,
+    id: 8,
     name: 'Git', 
     text: '' , 
     img: gitImg,
-    value : "3" 
+    value : "2" 
   },
   {
-    id: 10,
+    id: 9,
     name: 'GitHub', 
     text: '' , 
     img: githubImg,
@@ -160,6 +156,9 @@ const Skill = () => {
           </Card>
         ))}
         </Box>
+        <p className={classes.text}>
+          チャートの見方としては「1:基本を学習中」、「2:この言語を使って何かを作ったことがある」、「3:実務で少し使用したことがある」、「4: 実務レベルで自由に駆使できる」、「5: 完璧にできる」。
+        </p>
       </div>
     </div>
   );
